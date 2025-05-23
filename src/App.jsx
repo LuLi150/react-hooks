@@ -29,7 +29,7 @@
 /*
 //Mudar mensagem, usando useEffect demonstrando a mudança
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
  export default function App(){
 
@@ -102,11 +102,10 @@ export default function App(){
   )
 }
 */
+/*
+//Deu ruim, da loop infinito
 
 import { useState , useEffect } from "react";
-
-
-
 
 export default function App(){
 
@@ -122,5 +121,32 @@ const [data, setData] = useState('');
   
   return(
     <h1>useEffect</h1>
+  );
+}
+*/
+//Exemplo de props
+/*
+import Titulo from "./Titulo";
+
+export default function App(){
+
+  return(
+   <Titulo nome = "luh"/>
+  );
+}
+*/
+
+//Exemplo de props como children
+
+import Titulo from "./Titulo";
+
+export default function App(){
+
+  return(
+   <Titulo>
+      <p>paragráfo</p>
+      <button></button>
+      <h1>Com children posso usar varias tags, como esse paragrafo e botão</h1>
+   </Titulo>
   );
 }
